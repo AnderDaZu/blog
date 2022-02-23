@@ -31,4 +31,5 @@ class Post extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
+
 }

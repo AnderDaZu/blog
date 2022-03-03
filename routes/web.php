@@ -13,3 +13,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');

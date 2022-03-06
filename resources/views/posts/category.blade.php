@@ -3,7 +3,10 @@
         <h1 class="uppercase text-center text-3xl font-bold">Categoria: {{ $category->name }}</h1>
 
         @foreach ($posts as $post)
-            <article class="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+            <x-card-post :post=$post>
+
+            </x-card-post>
+            {{-- <article class="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
                 <img class="w-full h-72 object-cover object-center" src="{{ Storage::url($post->image->url) }}" alt="">
 
                 <div class="px-6 py-4">
@@ -20,7 +23,7 @@
                         <a class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2" href="{{ route('posts.index') }}">{{ $tag->name }}</a>
                     @endforeach
                 </div>
-            </article>
+            </article> --}}
         @endforeach
 
         <div class="mt-4">
